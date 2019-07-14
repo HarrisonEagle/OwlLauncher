@@ -7,10 +7,11 @@
     tools:context=".MainActivity">
     
     
-    <ListView
+    <GridView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/applist"></ListView>
+        android:numColumns="5"
+        android:id="@+id/applist"></GridView>
 
     
 

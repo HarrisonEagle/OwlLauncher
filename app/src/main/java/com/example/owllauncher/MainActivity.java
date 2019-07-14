@@ -9,6 +9,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.widget.GridView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -46,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         CustomListView listView=new CustomListView(MainActivity.this);
         listView.setTweetList(pkgAppsList);
-        ListView applist=findViewById(R.id.applist);
+        GridView applist=findViewById(R.id.applist);
         applist.setAdapter(listView);
 
 

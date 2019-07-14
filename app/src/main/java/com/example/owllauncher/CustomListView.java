@@ -50,7 +50,12 @@ public class CustomListView extends BaseAdapter {
     public View getView(final int position, View convertView, ViewGroup parent) {
         convertView = layoutInflater.inflate(R.layout.app_list,parent,false);
 
-        ((TextView)convertView.findViewById(R.id.appname)).setText(MainActivity.appnamelist.get(position));
+        String appname=MainActivity.appnamelist.get(position);
+        if(appname.length()>4){
+            appname=appname.substring(0,4)+"..";
+        }
+
+        ((TextView)convertView.findViewById(R.id.appname)).setText(appname);
         ((ImageView)convertView.findViewById(R.id.appicon)).setImageDrawable(MainActivity.iconres.get(position));
         ((LinearLayout)convertView.findViewById(R.id.openapp)).setOnClickListener(new View.OnClickListener() {
             @Override
